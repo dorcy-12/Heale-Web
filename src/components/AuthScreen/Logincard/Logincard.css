@@ -1,0 +1,361 @@
+/* Body style: color only as per the instruction */
+body {
+  background: linear-gradient(to bottom right, #fff4e4, #f9f6f29a) !important;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Add this line to make the body height 100vh */
+  overflow: hidden; /* Add this line to prevent overflow */
+}
+
+html{
+  background: linear-gradient(to bottom right, #fff4e4, #f9f6f29a) !important;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: flex-end; /* Keeps the card to the right */
+  align-items: center; /* Vertically centers the card */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: auto;
+  background: linear-gradient(to bottom right, #fff4e4, #f9f6f29a) !important;
+}
+
+/* Login card styles adjusted for vertical centering and right-side positioning */
+.login-card {
+  max-width: 300px;
+  height: 100vh;
+  position: absolute;
+  right: 0%; /* Ensures it sticks to the right */
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.021);
+  border-radius: 14px;
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: box-shadow 0.3s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally centers content */
+  justify-content: center; /* Vertically centers content */
+  padding-inline: 5%; /* Adjusted padding */
+}
+
+/* Media query to apply blur effect when the media width is above 800px */
+@media (min-width: 801px) {
+  .login-card {
+    backdrop-filter: blur(10px);
+  }
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  margin-top: 5%;
+}
+
+.logo-login {
+  display: block;
+  width: 30%;
+  height: auto;
+  margin-top: 10%;
+}
+
+/* Auth button styles */
+.auth-btn {
+  width: 100%;
+  padding: 15px 30px;
+  margin: 15px 0;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 6px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+}
+
+/* Input field styles */
+.input {
+  width: 95%;
+  padding: 13px;
+  margin-bottom: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.705);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.input:focus {
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+/* Link and hover styles */
+.link,
+.forgot-link {
+  text-align: left;
+  font-size: 0.85rem;
+  margin: 2%;
+}
+
+.forgot-link {
+  text-align: center;
+}
+
+.link a {
+  color: #7a7a7a85;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, text-shadow 0.3s ease-in-out;
+  text-align: left;
+}
+
+.link a:hover {
+  text-shadow: 0 0 8px rgba(42, 98, 219, 0.5);
+}
+
+/* Sign-in and signup button styles with hover and active effects */
+.signin-btn {
+  background: #000000ee;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.829);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.signin-btn:hover {
+  background: #000000c7;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.signin-btn:active {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(1px);
+}
+.signup-btn {
+  background: #28554a;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.829);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.signup-btn:hover {
+  background: #39846f;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.signup-btn:active {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(1px);
+}
+.google-btn {
+  display: flex;
+  /*background: linear-gradient(to bottom right, #DEC29D, #D1B289 );*/
+  background: #a36e43;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  justify-content: center;
+  align-items: center;
+}
+.google-btn:hover {
+  background: #bf9872;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+.google-btn img {
+  width: 10%;
+  height: auto;
+  margin-right: 5%;
+}
+
+.resend-verification {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.resend-button {
+  padding: 10px 20px;
+  margin: 15px 0;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+  color: white;
+}
+
+.resend-button:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+/* Terms section styles */
+.terms-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #9e9e9e;
+  font-size: 0.85rem;
+  margin-top: 25px;
+  line-height: 1.5;
+}
+
+.terms-section a {
+  color: #7a7a7a85;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.terms-section a:hover {
+  text-shadow: 0 0 8px rgba(42, 98, 219, 0.5);
+}
+
+.terms-section::before,
+.terms-section::after {
+  content: "|";
+  margin: 0 20px;
+  color: #d0d0d0;
+}
+.gray-text {
+  color: #7a7a7a85;
+  /* This is a medium gray color. Adjust the hex code as needed. */
+}
+.divider {
+  margin: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    overflow-y: auto;
+    padding: 20px;
+    height: 100%;
+  }
+
+  .login-card {
+    position: absolute; /* Reset position */
+    width: 100%;
+    max-width: 768px;
+    height: 100% !important;
+    margin: 0 auto; /* Center horizontally */
+    transform: none;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-bottom: 60%;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  .input,
+  .auth-btn {
+    padding: 12px 15px;
+    width: 80%;
+    max-width: none; /* Remove max-width restriction */
+    margin: 0 0 10px; /* Remove horizontal centering */
+  }
+  .input {
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .forgot-link {
+    margin-left: 0;
+    text-align: center;
+    font-size: 0.9em;
+  }
+
+  .terms-section {
+    margin-top: 4%;
+  }
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.back-button {
+  position: absolute;
+  top: 5vh;
+  left: 1vw;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #777575;
+}
+
+.back-button:hover {
+  font-size: 16.5px;
+  font-weight: 500;
+}
+.terms-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.terms-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.terms-container label {
+  font-size: 14px;
+}
+
+.terms-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.terms-container a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,40 @@
+.message-display {
+    padding: 10px;
+    height: 100vh; /* Sets the height relative to the viewport */
+    max-height: 100vh; /* Ensures the max-height is not less than the viewport height */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.5;
+    text-align: left;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+
+.message {
+    background-color: #e0e0e0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 5px 0;
+    max-width: 80%;
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds subtle shadow to messages */
+    border: 1px solid #d1d1d1; /* Adds a slight border */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Changes cursor to indicate interactivity */
+    display: inline-block; /* Helps in maintaining the bubble shape */
+    position: relative; /* Sets positioning context for pseudo-elements or child elements */
+    font-size: 0.95em; /* Slightly smaller font for messages */
+}
+
+/* Additional styling for hover effect */
+.message:hover {
+    background-color: #d9d9d9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+}

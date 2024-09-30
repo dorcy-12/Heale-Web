@@ -1,0 +1,200 @@
+/* Base overlay styling with a refined visual backdrop */
+.feedback-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+/* Responsive modal with modern aesthetics and refined design */
+.feedback-modal {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add spacing between sections */
+  color: #333;
+}
+
+/* Rating section styling */
+.rating-section {
+  text-align: center;
+}
+
+.rating-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 20px; /* Add spacing between rating buttons */
+}
+
+.rating-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 4px;
+}
+
+.rating-button:hover,
+.rating-button.selected {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.rating-button span {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Enhanced input styling with modern aesthetics and proper positioning */
+.feedback-input-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Add spacing between label and input */
+}
+
+.feedback-input-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.feedback-input {
+  width: 95%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out;
+  resize: none;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.feedback-input:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* Action buttons with refined styling and modern aesthetics */
+.feedback-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Add spacing between buttons */
+}
+
+.submit-feedback,
+.close-modal {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.submit-feedback {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+.submit-feedback:hover,
+.submit-feedback:focus {
+  background-color: #5a4eff;
+  transform: translateY(-2px);
+}
+
+.close-modal {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  background-color: #e53935;
+  transform: translateY(-2px);
+}
+
+/* Improved responsive adjustments for an optimal mobile experience */
+@media (max-width: 768px) {
+  .feedback-modal {
+    width: 88%;
+    padding: 16px;
+    max-width: none;
+  }
+
+  .feedback-modal-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px; /* Add spacing between buttons on mobile */
+  }
+
+  .submit-feedback,
+  .close-modal {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+/* Refined animation for modal entry with smoother motion */
+@keyframes modalEntry {
+  0% {
+    transform: scale(0.95) translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.feedback-modal {
+  animation: modalEntry 0.4s ease-out;
+}
+
+.feedback-input.error-shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  border-color: red; /* Visual cue for error */
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
